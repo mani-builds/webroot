@@ -79,9 +79,7 @@ loadMarkdown(readmePath, "readmeDiv", "_parent", 1, function() {
             if (hasExplicitPort && currentPort !== '8887') {
                 content = content.replace(/localhost:8887/g, `localhost:${currentPort}`);
                 
-                // Add port notice at the top
-                const portNotice = `<div style="background-color: #e7f3ff; border: 1px solid #b3d9ff; padding: 10px; margin-bottom: 15px; border-radius: 5px;"><strong>Your current port ${currentPort} has been used to replace 8887 in the display below.</strong></div>`;
-                content = portNotice + content;
+              content = portNotice + content;
             }
             
             // If we're in a webroot folder on localhost with explicit port, insert it after "localhost:port/"
