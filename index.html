@@ -22,7 +22,7 @@ console.log("Current location:", window.location.href);
 console.log("Base URL:", location.protocol + '//' + location.host + '/');
 
 // Try multiple paths for README.md to ensure it works on GitHub Pages
-const readmePath = location.protocol + '//' + location.host + '/README.md';
+const readmePath = 'README.md';
 console.log("Trying to load README from:", readmePath);
 
 loadMarkdown(readmePath, "readmeDiv", "_parent", 1, function() {
