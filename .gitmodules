@@ -1,6 +1,6 @@
 [submodule "localsite"]
 	path = localsite
-	url = https://github.com/ModelEarth/localsite
+	url = git@github.com:mani-builds/localsite.git 
 [submodule "feed"]
 	path = feed
 	url = https://github.com/modelearth/feed
@@ -18,10 +18,13 @@
 	url = https://github.com/modelearth/comparison
 [submodule "team"]
 	path = team
-	url = https://github.com/modelearth/team
+  url = git@github.com:mani-builds/team.git
 [submodule "realitystream"]
 	path = realitystream
 	url = https://github.com/modelearth/realitystream
 [submodule "projects"]
 	path = projects
 	url = https://github.com/modelearth/projects
+[submodule "cloud"]
+	path = cloud
+	url = https://github.com/modelearth/cloud
