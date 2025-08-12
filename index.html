@@ -16,27 +16,7 @@
 // Create OS detection panel using shared function
 autoCreateOSDetectionPanel('#commonSetupDiv');
 
-// Add debugging information
-console.log("Attempting to load README.md");
-console.log("Current location:", window.location.href);
-console.log("Base URL:", location.protocol + '//' + location.host + '/');
-
-// Try multiple paths for README.md to ensure it works on GitHub Pages
-let readmePath = 'README.md';
-
-// Check if we're on GitHub Pages and adjust the path accordingly
-if (window.location.hostname.includes('github.io') && !window.location.pathname.startsWith('/localsite/')) {
-    // For GitHub Pages, we need to look for README.md in the correct location
-    // The site is served from https://[account].github.io/webroot/, so README.md is in the webroot
-    readmePath = 'README.md';
-} else if (window.location.hostname.includes('github.io') && window.location.pathname.startsWith('/localsite/')) {
-    // If we're somehow in the localsite path, we might need to go up a level
-    readmePath = '../README.md';
-}
-
-console.log("Trying to load README from:", readmePath);
-
-loadMarkdown(readmePath, "readmeDiv", "_parent", 1, function() {
+loadMarkdown("README.md", "readmeDiv", "_parent", 1, function() {
     // https://partnertools.github.io/webroot/
     // Process content after README loads into #readmeDiv
 
