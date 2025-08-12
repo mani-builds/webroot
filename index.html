@@ -16,8 +16,16 @@
 // Create OS detection panel using shared function
 autoCreateOSDetectionPanel('#commonSetupDiv');
 
-// Use absolute path for README.md to ensure it works on GitHub Pages
-loadMarkdown("/README.md", "readmeDiv", "_parent", 1, function() {
+// Add debugging information
+console.log("Attempting to load README.md");
+console.log("Current location:", window.location.href);
+console.log("Base URL:", location.protocol + '//' + location.host + '/');
+
+// Try multiple paths for README.md to ensure it works on GitHub Pages
+const readmePath = location.protocol + '//' + location.host + '/README.md';
+console.log("Trying to load README from:", readmePath);
+
+loadMarkdown(readmePath, "readmeDiv", "_parent", 1, function() {
     // https://partnertools.github.io/webroot/
     // Process content after README loads into #readmeDiv
 
