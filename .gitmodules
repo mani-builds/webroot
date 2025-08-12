@@ -1,6 +1,6 @@
 [submodule "localsite"]
 	path = localsite
-	url = https://github.com/ModelEarth/localsite
+	url = git@github.com:mani-builds/localsite.git 
 [submodule "feed"]
 	path = feed
 	url = https://github.com/modelearth/feed
