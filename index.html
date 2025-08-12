@@ -16,7 +16,8 @@
 // Create OS detection panel using shared function
 autoCreateOSDetectionPanel('#commonSetupDiv');
 
-loadMarkdown("README.md", "readmeDiv", "_parent", 1, function() {
+// Use absolute path for README.md to ensure it works on GitHub Pages
+loadMarkdown("/README.md", "readmeDiv", "_parent", 1, function() {
     // https://partnertools.github.io/webroot/
     // Process content after README loads into #readmeDiv
 
